@@ -1,16 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Paras Kebab</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="nav-header">Paras Kebab</h1>
+        <ul>
+          <li><a>Etusivu</a></li>
+          <li><a>Menu</a></li>
+          <li><a>Yhteystiedot</a></li>
+          <li>
+            <button id="open-register-dialog">
+              <i class="fas fa-user-plus register-icon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="main.js" defer></script>
-</head>
+    <section class="todo-section"></section>
 
-<body>
-  <h1>Sample Page</h1>
-</body>
+    <section class="about-section">
+      <div class="about-img"></div>
+      <div class="about-content">
+        <h2 class="about-header">Lisää meistä</h2>
+        <p class="about-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ad nemo
+          dolor cupiditate eveniet repellendus quod temporibus non pariatur,
+          nulla magni voluptate fugiat delectus doloremque excepturi molestiae
+          fuga, distinctio praesentium!
+        </p>
 
+        <img src="img/kebab.png" alt="kebab" class="kebab-img" />
+      </div>
+    </section>
+
+    <dialog id="register-dialog">
+      <form id="register-form" action="register">
+        <h2>Register account</h2>
+
+        <label for="username">Username, minimum 3 letters:</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          minlength="3"
+          required
+        />
+
+        <label for="email">Email(@metropolia.fi):</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          pattern=".+@metropolia\.fi"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          pattern="(?=.*[A-Z])(?=.*\d).{1,}"
+          required
+        />
+
+        <div>
+          <input type="submit" value="Submit" />
+
+          <button id="close-register-dialog">Close</button>
+        </div>
+      </form>
+    </dialog>
+
+    <footer class="footer">
+      <p class="footer-text">&copy; 2026 paras kebab</p>
+    </footer>
+  </body>
 </html>
