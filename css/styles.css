@@ -98,6 +98,7 @@ body {
   box-sizing: border-box;
   margin-top: 50px;
   overflow: hidden;
+  position: relative;
 }
 
 .about-content {
@@ -138,9 +139,9 @@ body {
 
 .kebab-img {
   position: absolute;
-  top: 80%;
+  top: 10%;
   right: 10%;
-  transform: translate(-10%, -50%);
+  transform: translate(-10%, -40%);
   width: 150px;
   height: 150px;
 }
